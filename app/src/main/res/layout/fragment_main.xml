@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#5D4037"
+    android:weightSum="10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FF0000"
+        android:textSize="18sp"
+        />
+
+
+    <littlecold2.osaka_app.AnimatedExpandableListView
+
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp">-->
+    <!--<Button-->
+        <!--android:id="@+id/save_service"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="80dp"-->
+        <!--android:text="데이터 저장"-->
+        <!--android:background="#FFFFFF"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:id="@+id/find_service"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="서비스 찾기"-->
+        <!--android:background="#FFFFFF"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+
+<!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:scrollbars="vertical"-->
+            <!--android:fadeScrollbars="false"-->
+            <!--android:background="#FFFFFF"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:id="@+id/sample"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="결과창"-->
+                <!--android:textSize="14sp"/>-->
+
+        <!--</ScrollView>-->
+
+        <!--&lt;!&ndash;<HorizontalScrollView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
+            <!--&lt;!&ndash;<ScrollView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:scrollbars="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:fadeScrollbars="false"&ndash;&gt;-->
+                <!--&lt;!&ndash;&gt;&ndash;&gt;-->
+
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/view2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->
+        <!--&lt;!&ndash;</HorizontalScrollView>&ndash;&gt;-->
+    <!--</LinearLayout>-->
+
+
+
+
+</LinearLayout>
