@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Fragment_Main mainFragment;
     private Fragment_Map mapFragment;
     private Fragment_Setup setupFragment;
-
+    BottomBar bottomBar;
     private DataManager dataManager= DataManager.getInstance();
 
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         initFragment();
 
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar = (BottomBar) findViewById(R.id.bottomBar);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {

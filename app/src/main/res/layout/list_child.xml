@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingRight="10dp"
-    android:paddingLeft="50dp">
+    android:paddingLeft="10dp">
 
     <TextView
         android:id="@+id/textTitle"
@@ -17,11 +17,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-    <ImageView
-        android:id="@+id/child_item_icon"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <ImageView
+            android:id="@+id/child_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/child_item_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true" />
 
+        <ImageView
+            android:id="@+id/child_item_favor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1"
+            />
+        <!--android:clickable="true"-->
+
+    </LinearLayout>
 </LinearLayout>

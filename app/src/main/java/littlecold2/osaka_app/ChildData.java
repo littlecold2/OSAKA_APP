@@ -2,6 +2,8 @@ package littlecold2.osaka_app;
 
 import android.graphics.drawable.Drawable;
 
+import com.google.android.gms.maps.model.LatLng;
+
 class ChildData {
 
 //    * CustomListView가 담을 객체에 대한 Class 생성 */
@@ -15,7 +17,8 @@ class ChildData {
     String title;
     String hint;
 
-    public ChildData(String title, String hint) {
+
+    public ChildData(String title, String hint ) {
         this.title= title;
         this.hint = hint;
     }

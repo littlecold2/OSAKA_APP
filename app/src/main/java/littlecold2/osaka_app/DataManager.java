@@ -2,13 +2,22 @@ package littlecold2.osaka_app;
 
 import android.app.Activity;
 
+import com.google.android.gms.maps.model.LatLng;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataManager {
 
     private static DataManager instance = null;
     private Activity activity;
 
+    public List<Loc_data> loc_list = new ArrayList<>();
+//    public String loc_title = "오사카";
+//    public String loc_snippet = "여행의 모든 것";
 
     private DataManager(){
+        loc_list.add(new Loc_data("오사카","여행의 모든 것",new LatLng( 34.6,135.5)));
 
         //생성자앞에 private으로 선언하면서,
 

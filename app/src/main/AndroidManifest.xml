@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="littlecold2.osaka_app">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-
 
     <application
         android:allowBackup="true"
@@ -16,7 +15,8 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDd5yE0iEtz41Cm4NNoyL_Cud3htc61lYM"/>
+            android:value="AIzaSyDd5yE0iEtz41Cm4NNoyL_Cud3htc61lYM" />
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleInstance"
@@ -27,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"></activity>
     </application>
 
 </manifest>

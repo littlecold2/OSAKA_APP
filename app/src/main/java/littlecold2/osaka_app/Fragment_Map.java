@@ -21,6 +21,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,11 +38,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class Fragment_Map extends Fragment implements OnMapReadyCallback {
 
-
+    DataManager dataManager = DataManager.getInstance();
     private MapView mapView;
     private GoogleMap googleMap;
 
     public Fragment_Map() {
+    }
+
+    @Override
+    public void onResume() {
+//        ((MainActivity) dataManager.getActivity()).bottomBar.selectTabAtPosition(1,true);
+
+        super.onResume();
     }
 
 //    public static MainFragment newInstance(String text) {
@@ -89,17 +97,35 @@ public class Fragment_Map extends Fragment implements OnMapReadyCallback {
         mapView.getMapAsync(this);//
     }
 
+
     @Override
     public void onMapReady(GoogleMap map) {
         LatLng SEOUL = new LatLng(37.56, 126.97);
 
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
-        map.addMarker(markerOptions);
+        for(Loc_data loc_data:dataManager.loc_list)
+        {
+            Log.d("dddd", String.valueOf(dataManager.loc_list.size()));
+            markerOptions.position(loc_data.latLng);
+            markerOptions.title(loc_data.name);
+            markerOptions.snippet(loc_data.snippet);
+            map.addMarker(markerOptions).showInfoWindow();
 
-        map.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        map.animateCamera(CameraUpdateFactory.zoomTo(10));
+        }
+
+        map.getUiSettings().setZoomControlsEnabled(true);
+        if(dataManager.loc_list.size()>0)
+            map.moveCamera(CameraUpdateFactory.newLatLng(dataManager.loc_list.get(dataManager.loc_list.size()-1).latLng));
+//        else
+//        {
+//            markerOptions.position(loc);
+//            markerOptions.title(dataManager.loc_title);
+//            markerOptions.snippet(dataManager.loc_snippet);
+//            map.addMarker(markerOptions).showInfoWindow();
+//            new LatLng(34.6,135.5);
+//
+//        }
+        map.animateCamera(CameraUpdateFactory.zoomTo(14));
     }
+
 }

@@ -15,16 +15,20 @@ class ChildViewHolder {
 
     TextView title;
     TextView hint;
-    ImageView img;
+    ImageView info;
+    ImageView loc;
+    ImageView favor;
     ChildViewHolder()
     {
 
     }
-    ChildViewHolder(TextView title, TextView hint, ImageView img)
+    ChildViewHolder(TextView title, TextView hint, ImageView info,ImageView loc,ImageView favor)
     {
         this.title = title;
         this. hint = hint;
-        this.img = img;
+        this.info = info;
+        this.loc = loc;
+        this.favor =favor;
     }
 
     public void setHint(TextView hint) {
@@ -35,7 +39,7 @@ class ChildViewHolder {
         this.title = title;
     }
 
-    public void setImg(ImageView img) {
-        this.img = img;
-    }
+//    public void setImg(ImageView img) {
+//        this.img = img;
+//    }
 }
